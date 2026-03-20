@@ -1,102 +1,86 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body{
-background:#0f172a;
-color:#e2e8f0;
+html {
+    scroll-behavior: smooth;
 }
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px;
-background:#020617;
-border-bottom:1px solid #1e293b;
+/* BASE */
+body {
+    background: #0f172a;
+    color: #e2e8f0;
 }
 
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:#94a3b8;
-transition:0.3s;
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #020617;
+    border-bottom: 1px solid #1e293b;
 }
 
-section{
-padding:60px 20px;
-text-align:center;
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #94a3b8;
+    transition: 0.3s;
 }
 
-.home{
-height:60vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
+nav a:hover {
+    color: #38bdf8;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-margin-top:30px;
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.card{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
+/* HOME */
+.home {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-footer{
-text-align:center;
-padding:20px;
-background:#020617;
-color:#94a3b8;
-margin-top:40px;
+img {
+    border-radius: 50%;
+    margin-top: 20px;
 }
 
-nav a:hover{
-color:#38bdf8;
-}
-
+/* CARDS */
 .card {
-    transition: transform 0.3s, box-shadow 0.3s;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
 }
 
-.card-hover {
-    transform: scale(1.05);
+.card-content {
+    background: #1e293b;
+    border: 1px solid #334155;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-content:hover {
+    transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-.card{
-background:#1e293b;
-border:1px solid #334155;
-padding:20px;
-border-radius:10px;
-transition:0.3s;
-cursor:pointer;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
-}
-
-img{
-border-radius:50%;
-margin-top:20px;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-i {
-    margin-right: 8px;
+/* CONTATO */
+.contact {
+    text-align: center;
 }
 
 .contact p {
@@ -112,70 +96,60 @@ i {
 .contact a:hover {
     color: #38bdf8;
 }
+
 .contact i {
     color: #38bdf8;
 }
 
-.contact {
-    text-align: center;
+i {
+    margin-right: 8px;
 }
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;   /* centraliza o container */
-    padding: 0 20px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;   /* centraliza horizontal */
-    align-items: center;       /* centraliza vertical */
+/* SOCIAL ICONS */
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     margin-top: 20px;
-    
-}
-
-.social-icons a {
-    background:#1e293b;
-    color:#38bdf8; /* cor do ícone */
 }
 
 .social-icons a i {
-    color: inherit; /* garante que o ícone siga o link */
-}
-
-.social-icons a:hover {
-    background:#38bdf8;
-}
-
-.social-icons a:hover i {
-    color:#020617; /* cor do ícone no hover */
-}
-.social-icons a {
-    display: flex;             /* ESSENCIAL */
+    padding: 24px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    
-    width: 50px;
-    height: 50px;
-
     font-size: 22px;
     color: #38bdf8;
     background: #1e293b;
     border-radius: 50%;
+
+ /* COR PADRÃO VISÍVEL */
+    color: #020617;
     transition: 0.3s;
+   }
+
+/* GARANTE QUE O ÍCONE HERDE A COR */
+.social-icons a i {
+    color: inherit;
 }
 
-.social-icons a:hover {
-    color: #020617;
+.social-icons a:hover i {
     background: #38bdf8;
+    color: #020617;
     transform: scale(1.1);
 }
 
-.social-icons a {
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    color: #94a3b8;
+    margin-top: 40px;
 }
 
+/* TOAST */
 .toast {
     position: fixed;
     bottom: 20px;
