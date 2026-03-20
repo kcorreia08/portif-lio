@@ -1,161 +1,26 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+// SCROLL SUAVE
+document.querySelector(".nav").addEventListener("click", (e) => {
+    const link = e.target.closest("a");
 
-html {
-    scroll-behavior: smooth;
-}
+    if (!link) return;
 
-/* BASE */
-body {
-    background: #0f172a;
-    color: #e2e8f0;
-}
+    const id = link.getAttribute("href");
 
-/* HEADER */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: #020617;
-    border-bottom: 1px solid #1e293b;
-}
+    if (id.startsWith("#")) {
+        e.preventDefault();
 
-nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #94a3b8;
-    transition: 0.3s;
-}
+        document.querySelector(id)?.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+});
 
-nav a:hover {
-    color: #38bdf8;
-}
+// COPIAR EMAIL
+const emailBtn = document.querySelector('a[href^="mailto"]');
 
-/* SECTIONS */
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
+emailBtn.addEventListener("click", async (e) => {
+    e.preventDefault();
 
-/* HOME */
-.home {
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-img {
-    border-radius: 50%;
-    margin-top: 20px;
-}
-
-/* CARDS */
-.card {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.card-content {
-    background: #1e293b;
-    border: 1px solid #334155;
-    padding: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.card-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-/* CONTATO */
-.contact {
-    text-align: center;
-}
-
-.contact p {
-    margin: 10px 0;
-}
-
-.contact a {
-    color: #e2e8f0;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.contact a:hover {
-    color: #38bdf8;
-}
-
-.contact i {
-    color: #38bdf8;
-}
-
-i {
-    margin-right: 8px;
-}
-
-/* SOCIAL ICONS */
-.social-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.social-icons a i {
-    padding: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 22px;
-    color: #38bdf8;
-    background: #1e293b;
-    border-radius: 50%;
-
- /* COR PADRÃO VISÍVEL */
-    color: #020617;
-    transition: 0.3s;
-   }
-
-/* GARANTE QUE O ÍCONE HERDE A COR */
-.social-icons a i {
-    color: inherit;
-}
-
-.social-icons a:hover i {
-    background: #38bdf8;
-    color: #020617;
-    transform: scale(1.1);
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #020617;
-    color: #94a3b8;
-    margin-top: 40px;
-}
-
-/* TOAST */
-.toast {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #38bdf8;
-    color: #020617;
-    padding: 10px 15px;
-    border-radius: 8px;
-}
+    await navigator.clipboard.writeText("kauadavidcorreia@gmail.com");
+    alert("Email copiado! 🚀");
+});
