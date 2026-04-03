@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>.Portfolio/kauadavid</title>
+    <title>Portfólio | Kauã David</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 <header>
-    <h1>Portfólio | Kauã David</h1>
+    <h1><span class="portfolio-text">Portfólio</span> | Kauã David</h1>
     <nav>
         <a href="#home">Home</a>
         <a href="#about">Sobre</a>
@@ -19,64 +19,89 @@
      </nav>
      </header>
 
+<main>
 <section id="home" class="home">
-    <h1>Olá, me chamo Kauã David!</h1>
-    <p>Estudante de Engenharia e Desenvolvedor</p>
-
-    <img src="img/Untitled design.png" alt="Foto de Kauã David" width="200"> 
+    <div class="home-container">
+        <img src="assets/profile.jpeg" alt="Foto de perfil" class="home-profile-img">
+        <h2>Olá, me chamo Kauã David!</h2>
+        <p>Estudante de Engenharia e Desenvolvedor</p>
+        <a href="#about" class="scroll-arrow"><i class="fas fa-chevron-down"></i></a>
+    </div>
 </section>
 
 <section id="about" class="about">
-    <h2>Sobre Mim</h2>
-    <p>Sou um estudante de Engenharia, apaixonado por tecnologia e desenvolvimento Web. Sou apaixonado pelo desenvolvimento web e estou sempre buscando aprender mais para aprimorar minhas habilidades.</p>
+    <div class="about-container">
+        <div class="about-image">
+            <img src="assets/profile.jpeg" alt="Foto de perfil">
+        </div>
+        <div class="about-content">
+            <h2>Sobre Mim</h2>
+            <p>Sou um <span class="highlight">estudante de Engenharia</span>, apaixonado por <span class="highlight">tecnologia e desenvolvimento web</span>.</p>
+            <p>Estou sempre buscando evoluir e transformar ideias em <span class="highlight">soluções reais</span>.</p>
+            
+            <div class="technologies">
+                <div class="tech-icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-js-square"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#projects" class="scroll-arrow arrow-light"><i class="fas fa-chevron-down"></i></a>
 </section>
 
 <section id="projects">
     <h2>Projetos</h2>
 
-    <div class="card">
-        <div class="card-content">
+    <div class="projects">
+        <article class="project">
             <h3>Calculadora Python</h3>
             <p>Projeto simples de cálculo usando Python.</p>
-        </div>
+        </article>
 
-        <div class="card-content">
+        <article class="project">
             <h3>Site Responsivo</h3>
             <p>Website adaptável para celular e computador.</p>
-        </div>
+        </article>
     </div>
+    <a href="#contact" class="scroll-arrow"><i class="fas fa-chevron-down"></i></a>
 </section>
 
-<section id="contact" class="section contact">
-    <div class="container">
-        <h2>Contato</h2>
+<section id="contact" class="contact">
+    <h2>Contato</h2>
 
-        <div class="social-icons">
-            <a href="mailto:kdavidcorreia@gmail.com" target="_blank">
-                <i class="fa-solid fa-envelope">
-                </i>
-             </a>
+    <ul class="social-icons">
+        <li><a href="mailto:kdavidcorreia@gmail.com" target="_blank" aria-label="Enviar email">
+            <i class="fa-solid fa-envelope"></i>
+        </a></li>
 
-            <a href="tel:+5588997293671">
-                <i class="fa-solid fa-phone"></i>
-            </a>
+        <li><a href="tel:+5588997293671" aria-label="Ligar">
+            <i class="fa-solid fa-phone"></i>
+        </a></li>
 
-            <a href="https://github.com/kcorreia08?tab=overview&from=2026-01-01&to=2026-01-31" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
+        <li><a href="https://github.com/kcorreia08?tab=overview&from=2026-01-01&to=2026-01-31" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+        </a></li>
 
-            <a href="https://www.linkedin.com/in/kauã-david-correia-011560289" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-        </div>
-    </div>
+        <li><a href="https://www.linkedin.com/in/kauã-david-correia-011560289" target="_blank" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+        </a></li>
+    </ul>
 </section>
+
+</main>
 
 <footer>
     <p>© Dev | Kauã David</p>
- </footer>
+ </footer> 
  
  <script src="comportamento.js"></script>
 
   </body>
 </html>
+
