@@ -21,10 +21,25 @@ function handleNavClick(event) {
 
   const targetId = navLink.getAttribute("href");
 
+  // Permite que links externos funcionem normalmente
+  if (isExternalLink(navLink)) {
+    return; // Deixa o navegador abrir o link normalmente
+  }
+
   if (isAnchorLink(targetId)) {
     event.preventDefault();
     scrollToElement(targetId);
   }
+}
+
+/**
+ * Verifica se o link é externo
+ * @param {HTMLElement} link - Elemento do link
+ * @returns {boolean}
+ */
+function isExternalLink(link) {
+  const href = link.getAttribute("href");
+  return href && (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:"));
 }
 
 /**
