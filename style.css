@@ -1,42 +1,28 @@
-/* ===========================================
-   PORTFÓLIO - KAUÃ DAVID
-   Estilos organizados e semânticos
-   =========================================== */
-
-/* ===========================================
-   VARIÁVEIS CSS - PALETA DE CORES E VALORES
-   =========================================== */
 :root {
-  /* Cores principais */
   --primary-bg: #0f172a;
   --secondary-bg: #020617;
   --accent-bg: #1e293b;
   --light-bg: #ffffff;
 
-  /* Cores de texto */
   --primary-text: #e2e8f0;
   --secondary-text: #94a3b8;
   --dark-text: #0f172a;
 
-  /* Cores de destaque */
   --primary-color: #38bdf8;
   --secondary-color: #334155;
   --accent-color: #ff006e;
   --tertiary-color: #00f5ff;
 
-  /* Espaçamentos */
   --spacing-xs: 8px;
   --spacing-sm: 15px;
   --spacing-md: 20px;
   --spacing-lg: 30px;
   --spacing-xl: 40px;
 
-  /* Bordas */
   --border-radius-sm: 8px;
   --border-radius-md: 10px;
   --border-radius-lg: 50%;
 
-  /* Sombras */
   --shadow-sm: 0 10px 25px rgba(0,0,0,0.3);
   --shadow-md: 0 15px 30px rgba(0,0,0,0.4);
   --shadow-glow: 0 0 30px rgba(56, 189, 248, 0.4);
@@ -46,9 +32,6 @@
   --transition-normal: 0.3s ease;
 }
 
-/* ===========================================
-   RESET E CONFIGURAÇÕES GLOBAIS
-   =========================================== */
 * {
   margin: 0;
   padding: 0;
@@ -66,9 +49,6 @@ body {
   line-height: 1.6;
 }
 
-/* ===========================================
-   TIPOGRAFIA GLOBAL
-   =========================================== */
 h1, h2 {
   margin-bottom: var(--spacing-md);
 }
@@ -82,9 +62,6 @@ img {
   margin-top: var(--spacing-md);
 }
 
-/* ===========================================
-   HEADER - CABEÇALHO DO SITE
-   =========================================== */
 header {
   display: flex;
   justify-content: space-between;
@@ -122,9 +99,6 @@ nav a:hover {
   color: var(--primary-color);
 }
 
-/* ===========================================
-   SEÇÕES GERAIS
-   =========================================== */
 section {
   padding: 60px var(--spacing-md);
   text-align: center;
@@ -136,9 +110,6 @@ section {
   position: relative;
 }
 
-/* ===========================================
-   SEÇÃO HOME - PÁGINA INICIAL
-   =========================================== */
 #home {
   background: var(--primary-bg);
   color: var(--primary-text);
@@ -196,9 +167,6 @@ section {
   margin-bottom: 40px;
 }
 
-/* ===========================================
-   SETAS DE SCROLL - NAVEGAÇÃO ENTRE SEÇÕES
-   =========================================== */
 .scroll-arrow {
   position: absolute;
   bottom: var(--spacing-xl);
@@ -231,9 +199,6 @@ section {
   }
 }
 
-/* ===========================================
-   SEÇÃO SOBRE - APRESENTAÇÃO PESSOAL
-   =========================================== */
 #about {
   background: var(--light-bg);
   color: var(--dark-text);
@@ -295,7 +260,6 @@ section {
   font-weight: bold;
 }
 
-/* Ícones de tecnologias */
 .technologies {
   display: flex;
   gap: var(--spacing-md);
@@ -325,7 +289,6 @@ section {
   margin: 0;
 }
 
-/* Botão Ver Projetos */
 .btn-projects {
   display: inline-block;
   padding: 12px 30px;
@@ -350,9 +313,6 @@ section {
   margin-right: 0;
 }
 
-/* ===========================================
-   SEÇÃO PROJETOS - PORTFÓLIO DE TRABALHOS
-   =========================================== */
 #projects {
   background: var(--primary-bg);
   color: var(--primary-text);
@@ -392,9 +352,6 @@ section {
   line-height: 1.5;
 }
 
-/* ===========================================
-   SEÇÃO CONTATO - INFORMAÇÕES DE CONTATO
-   =========================================== */
 #contact {
   background: var(--light-bg);
   color: var(--dark-text);
@@ -426,7 +383,6 @@ i {
   margin-right: var(--spacing-xs);
 }
 
-/* Ícones sociais */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -454,26 +410,24 @@ i {
 }
 
 .social-icons a i {
-  padding: 24px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 22px;
-  color: var(--secondary-bg);
-  background: var(--accent-bg);
-  border-radius: var(--border-radius-lg);
+  font-size: 40px;
+  background: var(--primary-bg);
+  border-radius: var(--border-radius-md);
+  color: var(--primary-text);
   transition: var(--transition-normal);
 }
 
 .social-icons a:hover i {
+  transform: translateY(-5px);
   background: var(--primary-color);
-  color: var(--secondary-bg);
-  transform: scale(1.1);
+  color: var(--dark-text);
 }
 
-/* ===========================================
-   FOOTER - RODAPÉ DO SITE
-   =========================================== */
 footer {
   display: flex;
   justify-content: center;
@@ -496,10 +450,6 @@ footer p {
   background-clip: text;
 }
 
-/* ===========================================
-   COMPONENTES GERAIS
-   =========================================== */
-/* Cards genéricos */
 .card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -520,8 +470,6 @@ footer p {
   transform: translateY(-5px);
   box-shadow: var(--shadow-sm);
 }
-
-/* Toast notifications */
 .toast {
   position: fixed;
   bottom: var(--spacing-md);
@@ -531,10 +479,6 @@ footer p {
   padding: 10px 15px;
   border-radius: var(--border-radius-sm);
 }
-
-/* ===========================================
-   RESPONSIVIDADE - DESIGN ADAPTÁVEL
-   =========================================== */
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
